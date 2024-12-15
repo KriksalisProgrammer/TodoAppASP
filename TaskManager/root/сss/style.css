@@ -1,16 +1,4 @@
-﻿@* Views/Task/Index.cshtml *@
-@model IEnumerable<TaskManager.Model.TaskModel>
-@{
-    Layout = null;
-}
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Список задач</title>
-    <style>
-        
+﻿
 
 body {
     font-family: Arial, sans-serif;
@@ -92,34 +80,3 @@ ul li.completed span {
             text-decoration: line-through;
             color: #aaa;
         }
-
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <h1>Список задач</h1>
-
-   <form method="post" action="/Task/Add">
-    @Html.AntiForgeryToken() <!-- Если используется защита от CSRF -->
-    <input type="text" name="title" placeholder="Новая задача" required />
-    <button type="submit">Добавить</button>
-</form>
-
-<ul>
-    @foreach (var task in Model)
-    {
-        <li class="@(task.IsCompleted ? "completed" : "")">
-            <span>@task.Title</span>
-            @if (!task.IsCompleted)
-            {
-                <a asp-action="Complete" asp-route-id="@task.Id">[Выполнить]</a>
-            }
-            <a asp-action="Delete" asp-route-id="@task.Id">[Удалить]</a>
-        </li>
-    }
-</ul>
-    </div>
-
-</body>
-</html>

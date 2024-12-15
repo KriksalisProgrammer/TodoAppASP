@@ -5,8 +5,8 @@ namespace TaskManager.Model
     public class TaskModel
     {
         [Key]
-        public int Id;
-        public string Name;
+        public int Id { get; set; }
+        public string Title { get; set; }
         public bool IsCompleted { get; set; }
     }
 }

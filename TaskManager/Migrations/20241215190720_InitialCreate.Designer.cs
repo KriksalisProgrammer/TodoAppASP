@@ -10,7 +10,7 @@ using TaskManager.Data;
 namespace TaskManager.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241215105334_InitialCreate")]
+    [Migration("20241215190720_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -27,6 +27,10 @@ namespace TaskManager.Migrations
 
                     b.Property<bool>("IsCompleted")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 

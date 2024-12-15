@@ -109,3 +109,5 @@ L:\TaskManager\TaskManager\obj\Debug\net6.0\TaskManager.genruntimeconfig.cache
 L:\TaskManager\TaskManager\obj\Debug\net6.0\ref\TaskManager.dll
 L:\TaskManager\TaskManager\obj\Debug\net6.0\TaskManager.RazorAssemblyInfo.cache
 L:\TaskManager\TaskManager\obj\Debug\net6.0\TaskManager.RazorAssemblyInfo.cs
+L:\TaskManager\TaskManager\bin\Debug\net6.0\TaskManager.staticwebassets.runtime.json
+L:\TaskManager\TaskManager\bin\Debug\net6.0\tasks.db

@@ -14,23 +14,19 @@ namespace TaskManager.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
-        {
-            var tasks = _context.Tasks.ToList();
-            return View(tasks);
-        }
 
         [HttpPost]
         public IActionResult Add(string title)
         {
             if (!string.IsNullOrEmpty(title))
             {
-                var task = new TaskModel { Name = title, IsCompleted = false };
+                var task = new TaskModel { Title = title, IsCompleted = false };
                 _context.Tasks.Add(task);
                 _context.SaveChanges();
             }
             return RedirectToAction("Index");
         }
+
 
         public IActionResult Complete(int id)
         {
@@ -52,6 +48,11 @@ namespace TaskManager.Controllers
                 _context.SaveChanges();
             }
             return RedirectToAction("Index");
+        }
+        public IActionResult Index()
+        {
+            var tasks = _context.Tasks.ToList();
+            return View(tasks);
         }
     }
 }

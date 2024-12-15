@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "8uAqbNoeo/ERdmJ0jR8eofZhSeFltCD6FXTGS+txtt8=",
+  "Hash": "8iv7YjgSxSm2knJbcu4lmbsazDqtPr6qoySj8EzYo9c=",
   "Source": "TaskManager",
   "BasePath": "_content/TaskManager",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "TaskManager\\wwwroot",
+      "Source": "TaskManager",
+      "ContentRoot": "L:\\TaskManager\\TaskManager\\wwwroot\\",
+      "BasePath": "_content/TaskManager",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
