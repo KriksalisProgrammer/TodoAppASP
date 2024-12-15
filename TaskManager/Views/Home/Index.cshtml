@@ -1,0 +1,10 @@
+﻿@model IEnumerable<TaskManager.Model.TaskModel>
+
+<h1>Список задач</h1>
+
+<ul>
+    @foreach (var task in Model)
+    {
+        <li>@task.Name</li>
+    }
+</ul>
