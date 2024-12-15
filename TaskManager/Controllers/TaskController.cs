@@ -27,7 +27,7 @@ namespace TaskManager.Controllers
             return RedirectToAction("Index");
         }
 
-
+        [HttpPost]
         public IActionResult Complete(int id)
         {
             var task = _context.Tasks.Find(id);
@@ -38,7 +38,7 @@ namespace TaskManager.Controllers
             }
             return RedirectToAction("Index");
         }
-
+        [HttpPost]
         public IActionResult Delete(int id)
         {
             var task = _context.Tasks.Find(id);
